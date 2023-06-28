@@ -7,10 +7,17 @@
 
     //ENTRADA
 
-
+const NotaAjudou = Number(prompt(`informe a nota do aluno que ajudou`).trim().replace(",","."));
+const NotaAjudado = Number(prompt(`informe a nota do aluno que foi ajudado`).trim().replace(",","."));
     //PROCESSAMENTO
-
-
+if (NotaAjudado > NotaAjudou){
+    alert(`CRIA MAIOR QUE O CRIADOR ${NotaAjudado}`);
+    
+}
+else {
+    let NotaBonus = (NotaAjudado * 0.1) + NotaAjudou
+    alert(`CONTINUE ENSINANDO!${NotaBonus}`)
+}
     //SAÍDA
 
 </script>

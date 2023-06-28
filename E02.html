@@ -10,10 +10,29 @@
 
     //ENTRADA
 
+    const precoKgMelancia = Number(prompt("informe o preço por kg da melacia").replace(",","."));
+    const precoKgCebola = Number(prompt("informe o preço por kg da cebola").replace(",","."));
+    const preçoMamao = Number(prompt("informe o preço por unidade do mamao").replace(",","."));
+    const precoAbacate = Number(prompt("informe o preço por kg do abacate").replace(",","."));
+    const Dinheiro = Number(prompt("informe quanto dinheiro voce tem").replace(",","."));
+    let QtaMamao = 5
+    let kgMelancia = 3
+    let QtaAbacate = 4
+    let kgCebola = 1.1
+    let ResultadoPreço = (QtaMamao * preçoMamao) + (QtaAbacate * precoAbacate) + (kgCebola * precoKgCebola) + (kgMelancia * precoKgMelancia)
+    let ResultadoDinheiro = Dinheiro - ResultadoPreço
+
 
     //PROCESSAMENTO
-
-
+    if (ResultadoDinheiro == 0) {
+        alert(`voce tinha exatamente a quantia de dinheiro necessario ${Dinheiro}reais`)
+    }
+    else if (ResultadoDinheiro >= 0) {
+        alert(`sobrou ${ResultadoDinheiro.toFixed(2).replace(".",",")}reais`)
+    }
+    else{
+        alert(`faltou ${ResultadoDinheiro.toFixed(2).replace(".",",").replace("-"," ")}reais`)
+    }
     //SAÍDA
 
 </script>
